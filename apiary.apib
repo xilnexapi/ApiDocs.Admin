@@ -66,19 +66,33 @@ permissions for requested operation.
 ### Query parameters:
 `/admin/{version}/{controller}/search` support query parameters to refine responses
 
-* `select` - eg. /search?select={fieldName1}, {fieldName2}
-* `filter` -  filter parameter to control search results. eg. /search?filter={fieldName1==Malaysia} 
-    * `equal` - exact same. `=@`
-    * `not equal` - not same. `!=`, `<>`
-    * `like` - `=%`, `%=`, `=@`
-    * `more than` - `>`
-    * `more than or equal` - `>=`
-    * `less than` - `<`
-    * `less than or equal` - `<=`
-* `sort`   - 
-    * `desc` - `-`
-* `limit`  -
-* `offset` -
+* `select` - 
+    * Example
+        * /search?select=fieldName1, fieldName2
+* `filter` -  filter parameter to control search results. 
+    * Equal - exact same. `=@`
+    * Not equal - not same. `!=`, `<>`
+    * Like - `=%`, `%=`, `=@`
+    * More than - `>`
+    * more than or equal - `>=`
+    * Less than - `<`
+    * Less than or equal - `<=`
+    * Filter operator - `And`, `Or`
+    * Example 
+        * /search?filter=(fieldName1==Malaysia)
+        * /search?filter=(fieldName1==Malaysia) AND (fieldName2==Honey)
+        * /search?filter=(fieldName1==Malaysia) OR (fieldName1==Cina)
+* `sort` - 
+    * Asc - 
+    * Desc - `-`
+* `limit`  - Limit the number of record
+    * Number - eg.`1`, `125`, `200`
+    * Example
+        * /search?limit=125
+* `offset` - Excludes the first set of record
+    * Number - eg.`1`, `5`, `9`
+    * Example
+        * /search?offset=1
 
 
 ## Group BarcodeLookups
