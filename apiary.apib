@@ -1,7 +1,85 @@
 FORMAT: 1A
-HOST: http://api.xilnex.com/
+HOST: https://api.xilnex.com/
 
 # Core Data API V1
+
+## Scope and Concepts
+Web bytes provides a complete API accessible via HTTPS. This API is the best 
+way to intergrate website, e-commerce, server, mobile written in any programming 
+language such as JavaScript, Ruby, Swift, Object-C. C#, Java, php, etc.
+
+## Setup for REST API
+For using this API you need send authenticated HTTP requests. Exists several 
+way to do this:
+* Send a HTTP header `Token: {api_token}`, where `{api_token}` is your API
+token
+* Send a HTTP header `Dkey: {Dkey}`, where `{dkey}` is your private key
+
+Your API token and Dkey you can request from our comapny **api@webbytes.com.my**
+by providing below
+information in your email
+* Company Name:
+* Name:
+* Purpose of the API:
+    * Purpose:
+    * Request action: `Read, Write, Update, Delete`
+* Super admin email address:
+* Api e-mail address :
+* Api e-mail password : 
+
+API e-mail address and password `You need to create a user on xilnex application, and
+specific for API purpose only`
+
+## Basic Usage
+### Allowed HTTPs requests:
+* `POST` - To create resource
+* `PUT` - To update resource
+* `GET` - Get a resource or list of resources
+* `DELETE` - To delete resource
+
+### Description Of Usual Server Responses:
+* 200 `ok` - the request was successful
+    * `ok` 
+        * `true` mean success to process 
+    * `status` - status of process
+        * `SuccessQuery`
+        * `SuccessInsert`
+        * `SuccessDelete`
+        * `SuccessUpdate`
+    * `warning`
+        * null
+    * `error`
+        * null
+    * `data` - Json data response from Api
+        * Object
+    * `timestamp`
+* 400 `Bad Request` - the request could not be understood or was missing required parameters.
+    * `ok` 
+        * `false` mean failed to process
+    * `status` - status of process
+    * `warning` - warning message return from server
+    * `timestamp`
+* 401 `Unauthorized` - authentication failed or user doesn't have 
+permissions for requested operation.
+* 500 `Internal server error` - server error
+
+### Query parameters:
+`/admin/{version}/{controller}/search` support query parameters to refine responses
+
+* `select` - eg. /search?select={fieldName1}, {fieldName2}
+* `filter` -  filter parameter to control search results. eg. /search?filter={fieldName1==Malaysia} 
+    * `equal` - exact same. `=@`
+    * `not equal` - not same. `!=`, `<>`
+    * `like` - `=%`, `%=`, `=@`
+    * `more than` - `>`
+    * `more than or equal` - `>=`
+    * `less than` - `<`
+    * `less than or equal` - `<=`
+* `sort`   - 
+    * `desc` - `-`
+* `limit`  -
+* `offset` -
+
 
 ## Group BarcodeLookups
 
