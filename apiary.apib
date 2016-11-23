@@ -1,0 +1,4875 @@
+FORMAT: 1A
+HOST: http://api.xilnex.com/
+
+# Core Data API V1
+
+## Group BarcodeLookups
+
+### /admin/v1/barcodelookups/count
+
+#### Receive a count of all Barcodelookups [GET]
+
++ Relation: BarcodeLookups_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/barcodelookups/{id}
+
+#### Receive a single Barcodelookup [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: BarcodeLookups_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Barcodelookup [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: BarcodeLookups_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Barcodelookup from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: BarcodeLookups_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all Barcodelookups [GET /admin/v1/barcodelookups/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: BarcodeLookups_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/barcodelookups
+
+#### Create a new Barcodelookup [POST]
+
++ Relation: BarcodeLookups_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Item_ID": {
+                  "type": "string"
+                },
+                "DOUBLE_UOM": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "STRING_BARCODE": {
+                  "type": "string"
+                },
+                "STRING_REMARK": {
+                  "type": "string"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "type": "string"
+                },
+                "SKU": {
+                  "type": "string"
+                },
+                "UOM": {
+                  "type": "string"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group CustomerBranches
+
+### /admin/v1/customerbranches/count
+
+#### Receive a count of all Customerbranches [GET]
+
++ Relation: CustomerBranches_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/customerbranches/{id}
+
+#### Receive a single Customerbranch [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: CustomerBranches_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Customerbranch [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: CustomerBranches_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Customerbranch from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: CustomerBranches_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all Customerbranches [GET /admin/v1/customerbranches/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: CustomerBranches_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/customerbranches
+
+#### Create a new Customerbranch [POST]
+
++ Relation: CustomerBranches_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Company_ID": {
+                  "type": "string"
+                },
+                "Location_ID": {
+                  "type": "string"
+                },
+                "DOUBLE_Credit_Limit": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Company_Type": {
+                  "type": "string"
+                },
+                "Salutation": {
+                  "type": "string"
+                },
+                "First_Name": {
+                  "type": "string"
+                },
+                "Last_Name": {
+                  "type": "string"
+                },
+                "Email": {
+                  "type": "string"
+                },
+                "Website": {
+                  "type": "string"
+                },
+                "Phone": {
+                  "type": "string"
+                },
+                "Office": {
+                  "type": "string"
+                },
+                "Mobile": {
+                  "type": "string"
+                },
+                "Fax": {
+                  "type": "string"
+                },
+                "Alt_Name": {
+                  "type": "string"
+                },
+                "Alt_Contact": {
+                  "type": "string"
+                },
+                "Alt_Phone": {
+                  "type": "string"
+                },
+                "Bill_Street": {
+                  "type": "string"
+                },
+                "Bill_City": {
+                  "type": "string"
+                },
+                "Bill_State": {
+                  "type": "string"
+                },
+                "Bill_ZipCode": {
+                  "type": "string"
+                },
+                "Deliver_Street": {
+                  "type": "string"
+                },
+                "Deliver_City": {
+                  "type": "string"
+                },
+                "Deliver_State": {
+                  "type": "string"
+                },
+                "Deliver_Zipcode": {
+                  "type": "string"
+                },
+                "Bill_Country": {
+                  "type": "string"
+                },
+                "Deliver_Country": {
+                  "type": "string"
+                },
+                "Remarks": {
+                  "type": "string"
+                },
+                "Bill_Remark": {
+                  "type": "string"
+                },
+                "Ship_Remark": {
+                  "type": "string"
+                },
+                "Gender": {
+                  "type": "string"
+                },
+                "DOB": {
+                  "type": "string"
+                },
+                "Currency": {
+                  "type": "string"
+                },
+                "Pay_Term": {
+                  "type": "string"
+                },
+                "Customer_Code": {
+                  "type": "string"
+                },
+                "Customer_Group": {
+                  "type": "string"
+                },
+                "Customer_Account_No": {
+                  "type": "string"
+                },
+                "Additional_Info": {
+                  "type": "string"
+                },
+                "Race": {
+                  "type": "string"
+                },
+                "Age": {
+                  "type": "string"
+                },
+                "Bool_Active": {
+                  "type": "boolean"
+                },
+                "BOOL_Enable_DOB": {
+                  "type": "boolean"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "type": "string"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group Customers
+
+### /admin/v1/customers/count
+
+#### Receive a count of all Customers [GET]
+
++ Relation: Customers_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/customers/{id}
+
+#### Receive a single Customer [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Customers_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "required": [
+                "Company_Name",
+                "Creation_Date"
+              ],
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Company_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Company_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Company_Registration_Number": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Company_Type": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Salutation": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "First_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Last_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Email": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "pattern": "^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$",
+                  "type": "string"
+                },
+                "Website": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Phone": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Office": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Mobile": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Alt_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Alt_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Alt_Phone": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bill_Street": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bill_City": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bill_State": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bill_Zipcode": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Deliver_Street": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Deliver_City": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Deliver_State": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Deliver_Zipcode": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Additional_Info": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Fax": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bill_Country": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Deliver_Country": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Remarks": {
+                  "maxLength": 1000,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Password": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Binarykey": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "BOOL_Web_Registered": {
+                  "type": "boolean"
+                },
+                "BOOL_Approved": {
+                  "type": "boolean"
+                },
+                "Bill_Remark": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Ship_Remark": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Price_Scheme": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "INT_EXTEND_1": {
+                  "format": "double",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "number"
+                },
+                "INT_EXTEND_2": {
+                  "format": "double",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "number"
+                },
+                "INT_EXTEND_3": {
+                  "format": "double",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "number"
+                },
+                "STRING_EXTEND_1": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_1": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_2": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_3": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_4": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_5": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_6": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_7": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_8": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_9": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_10": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_11": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_12": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_13": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_14": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_15": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_16": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_17": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_18": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Gender": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Race": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Age": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "DOUBLE_Point_Value": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Cash_Value": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Accumulate_Value": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Reference_Client_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Friendster_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Facebook_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Skype_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "MSN_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Creation_Date": {
+                  "pattern": "^(((0[1-9]|[12]\\d|3[01])\\/(0[13578]|1[02])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|[12]\\d|30)\\/(0[13456789]|1[012])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|1\\d|2[0-8])\\/02\\/((19|[2-9]\\d)\\d{2}))|(29\\/02\\/((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$",
+                  "type": "string"
+                },
+                "Atlternate_Look_Up": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "DOB": {
+                  "pattern": "^(((0[1-9]|[12]\\d|3[01])\\/(0[13578]|1[02])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|[12]\\d|30)\\/(0[13456789]|1[012])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|1\\d|2[0-8])\\/02\\/((19|[2-9]\\d)\\d{2}))|(29\\/02\\/((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$",
+                  "type": "string"
+                },
+                "BOOL_Enable_DOB": {
+                  "type": "boolean"
+                },
+                "DOUBLE_Individual_Discount": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Location_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Location_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Default_Sales_Type": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Pay_Term": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Currency": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "DOUBLE_Max_Credit": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Ref_Customer_Code": {
+                  "type": "string"
+                },
+                "INT_Terms": {
+                  "format": "int32",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer"
+                },
+                "Created_Location_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Income": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Customer_Code": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Customer_Group": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Customer_Account_No": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bool_Active": {
+                  "type": "boolean"
+                },
+                "BOOL_Allow_All_Branches": {
+                  "type": "boolean"
+                },
+                "Expiry_Extend_Date": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "pattern": "^(((0[1-9]|[12]\\d|3[01])\\/(0[13578]|1[02])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|[12]\\d|30)\\/(0[13456789]|1[012])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|1\\d|2[0-8])\\/02\\/((19|[2-9]\\d)\\d{2}))|(29\\/02\\/((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$",
+                  "type": "string"
+                },
+                "GST_No": {
+                  "maxLength": 50,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "BOOL_Is_Inclusive_MGST": {
+                  "type": "boolean"
+                },
+                "MGST_Tax_Code": {
+                  "maxLength": 50,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Created_By": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "IC": {
+                  "maxLength": 25,
+                  "minLength": 0,
+                  "type": "string"
+                }
+              }
+            }
+
+#### Modify an existing Customer [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Customers_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Customer from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Customers_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all Customers [GET /admin/v1/customers/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: Customers_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/customers
+
+#### Create a new Customer [POST]
+
++ Relation: Customers_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "required": [
+                "Company_Name",
+                "Creation_Date"
+              ],
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Company_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Company_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Company_Registration_Number": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Company_Type": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Salutation": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "First_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Last_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Email": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "pattern": "^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$",
+                  "type": "string"
+                },
+                "Website": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Phone": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Office": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Mobile": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Alt_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Alt_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Alt_Phone": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bill_Street": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bill_City": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bill_State": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bill_Zipcode": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Deliver_Street": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Deliver_City": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Deliver_State": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Deliver_Zipcode": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Additional_Info": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Fax": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bill_Country": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Deliver_Country": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Remarks": {
+                  "maxLength": 1000,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Password": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Binarykey": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "BOOL_Web_Registered": {
+                  "type": "boolean"
+                },
+                "BOOL_Approved": {
+                  "type": "boolean"
+                },
+                "Bill_Remark": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Ship_Remark": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Price_Scheme": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "INT_EXTEND_1": {
+                  "format": "double",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "number"
+                },
+                "INT_EXTEND_2": {
+                  "format": "double",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "number"
+                },
+                "INT_EXTEND_3": {
+                  "format": "double",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "number"
+                },
+                "STRING_EXTEND_1": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_1": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_2": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_3": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_4": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_5": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_6": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_7": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_8": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_9": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_10": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_11": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_12": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_13": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_14": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_15": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_16": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_17": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_18": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Gender": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Race": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Age": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "DOUBLE_Point_Value": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Cash_Value": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Accumulate_Value": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Reference_Client_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Friendster_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Facebook_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Skype_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "MSN_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Creation_Date": {
+                  "pattern": "^(((0[1-9]|[12]\\d|3[01])\\/(0[13578]|1[02])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|[12]\\d|30)\\/(0[13456789]|1[012])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|1\\d|2[0-8])\\/02\\/((19|[2-9]\\d)\\d{2}))|(29\\/02\\/((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$",
+                  "type": "string"
+                },
+                "Atlternate_Look_Up": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "DOB": {
+                  "pattern": "^(((0[1-9]|[12]\\d|3[01])\\/(0[13578]|1[02])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|[12]\\d|30)\\/(0[13456789]|1[012])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|1\\d|2[0-8])\\/02\\/((19|[2-9]\\d)\\d{2}))|(29\\/02\\/((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$",
+                  "type": "string"
+                },
+                "BOOL_Enable_DOB": {
+                  "type": "boolean"
+                },
+                "DOUBLE_Individual_Discount": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Location_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Location_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Default_Sales_Type": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Pay_Term": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Currency": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "DOUBLE_Max_Credit": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Ref_Customer_Code": {
+                  "type": "string"
+                },
+                "INT_Terms": {
+                  "format": "int32",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer"
+                },
+                "Created_Location_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Income": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Customer_Code": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Customer_Group": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Customer_Account_No": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bool_Active": {
+                  "type": "boolean"
+                },
+                "BOOL_Allow_All_Branches": {
+                  "type": "boolean"
+                },
+                "Expiry_Extend_Date": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "pattern": "^(((0[1-9]|[12]\\d|3[01])\\/(0[13578]|1[02])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|[12]\\d|30)\\/(0[13456789]|1[012])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|1\\d|2[0-8])\\/02\\/((19|[2-9]\\d)\\d{2}))|(29\\/02\\/((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$",
+                  "type": "string"
+                },
+                "GST_No": {
+                  "maxLength": 50,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "BOOL_Is_Inclusive_MGST": {
+                  "type": "boolean"
+                },
+                "MGST_Tax_Code": {
+                  "maxLength": 50,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Created_By": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "IC": {
+                  "maxLength": 25,
+                  "minLength": 0,
+                  "type": "string"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group Items
+
+### /admin/v1/items/count
+
+#### Receive a count of all Items [GET]
+
++ Relation: Items_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/items/{id}
+
+#### Receive a single Item [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Items_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Item [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Items_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Item from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Items_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all Items [GET /admin/v1/items/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: Items_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/items
+
+#### Create a new Item [POST]
+
++ Relation: Items_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Item_Code": {
+                  "type": "string"
+                },
+                "Item_Name": {
+                  "type": "string"
+                },
+                "Item_Type": {
+                  "type": "string"
+                },
+                "Item_Model": {
+                  "type": "string"
+                },
+                "Item_Description": {
+                  "type": "string"
+                },
+                "Item_Brand": {
+                  "type": "string"
+                },
+                "Category": {
+                  "type": "string"
+                },
+                "Department_Code": {
+                  "type": "string"
+                },
+                "Department_Name": {
+                  "type": "string"
+                },
+                "Vendor_Code": {
+                  "type": "string"
+                },
+                "INT_Total_Avail_Qty": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "INT_Total_Onhand_Qty": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Cost": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Manufacturer_Suggested_Retail_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Active_Price": {
+                  "type": "string"
+                },
+                "DOUBLE_Sale_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Employee_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Wholesale_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Custom_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Web_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Web_Dealer_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Margin": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Total_Profit": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Custom_Cost": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Unit_of_Measure": {
+                  "type": "string"
+                },
+                "Last_Receive_Date": {
+                  "type": "string"
+                },
+                "INT_Total_Quantity_Received": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "INT_Total_Returned_to_Vendor": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "INT_Total_Quantity_Sold": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "INT_Total_Quantity_Return": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Net_sales": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Profit_Margin": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "INT_Reorder_Point": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Atlternate_Look_Up": {
+                  "type": "string"
+                },
+                "Attribute": {
+                  "type": "string"
+                },
+                "Size": {
+                  "type": "string"
+                },
+                "Binarykey": {
+                  "type": "string"
+                },
+                "BOOL_Go_Global": {
+                  "type": "boolean"
+                },
+                "BOOL_FIFO": {
+                  "type": "boolean"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "type": "string"
+                },
+                "Group_Name": {
+                  "type": "string"
+                },
+                "BOOL_IsPackage": {
+                  "type": "boolean"
+                },
+                "Discount_Rate": {
+                  "type": "string"
+                },
+                "Group_Value": {
+                  "type": "string"
+                },
+                "Promotion_Name": {
+                  "type": "string"
+                },
+                "BOOL_IsService": {
+                  "type": "boolean"
+                },
+                "Custom_Field_Value_1": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_2": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_3": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_4": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_5": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_6": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_7": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_8": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_9": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_10": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_11": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_12": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_13": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_14": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_15": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_16": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_17": {
+                  "type": "string"
+                },
+                "Custom_Field_Value_18": {
+                  "type": "string"
+                },
+                "Creation_Date": {
+                  "type": "string"
+                },
+                "BOOL_Weighted": {
+                  "type": "boolean"
+                },
+                "DOUBLE_Cash_Value_Rate": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Points_Value_Rate": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Accumulate_Value_Rate": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "BOOL_Is_Prepack": {
+                  "type": "boolean"
+                },
+                "BOOL_Is_Consignment": {
+                  "type": "boolean"
+                },
+                "BOOL_Is_Unique_Item": {
+                  "type": "boolean"
+                },
+                "Xilnex_Vendor_ID": {
+                  "type": "string"
+                },
+                "DOUBLE_GST_Rate": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Commision_1": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Commision_2": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Commision_Rate_1": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Commision_Rate_2": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Commision_3": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Commision_4": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Commision_Rate_3": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Commision_Rate_4": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "BOOL_Allow_Sales_Without_Stocks": {
+                  "type": "boolean"
+                },
+                "Parent_Item_ID": {
+                  "type": "string"
+                },
+                "BOOL_Is_Child": {
+                  "type": "boolean"
+                },
+                "BOOL_Local_Price": {
+                  "type": "boolean"
+                },
+                "BOOL_FOC": {
+                  "type": "boolean"
+                },
+                "BOOL_Open_Price": {
+                  "type": "boolean"
+                },
+                "BOOL_disabled": {
+                  "type": "boolean"
+                },
+                "DOUBLE_AVG_Cost": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_FIFO_Cost": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_LIFO_Cost": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_AVG_PROFIT": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_FIFO_PROFIT": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_LIFO_PROFIT": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_LAST_STOCK_IN_COST": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Article_No": {
+                  "type": "string"
+                },
+                "Item_Color": {
+                  "type": "string"
+                },
+                "BOOL_Postpack": {
+                  "type": "boolean"
+                },
+                "BOOL_Branch_Assortment": {
+                  "type": "boolean"
+                },
+                "BOOL_ReturnableItem": {
+                  "type": "boolean"
+                },
+                "Purch_Unavailable_Date_From": {
+                  "type": "string"
+                },
+                "Purch_Unavailable_Date_To": {
+                  "type": "string"
+                },
+                "Purch_Unavailable_Remark": {
+                  "type": "string"
+                },
+                "Expiry_Calculation": {
+                  "type": "string"
+                },
+                "Day_Before_Expiry": {
+                  "type": "string"
+                },
+                "Shelf_Life_In_Days": {
+                  "type": "string"
+                },
+                "Item_Division": {
+                  "type": "string"
+                },
+                "DOUBLE_DRIVER_COMMISSION_RATE": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_DRIVER_COMMISSION_PERCENT": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_INSTALLER_COMMISSION_RATE": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_INSTALLER_COMMISSION_PERCENT": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "INT_Default_Warranty_Month": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_Max_Warranty_Month": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "Warranty_Group": {
+                  "type": "string"
+                },
+                "BOOL_IsWarranty": {
+                  "type": "boolean"
+                },
+                "Default_Warranty_Item": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Warranty_Serial_No_Prefix": {
+                  "type": "string"
+                },
+                "Additional_Item_Type": {
+                  "type": "string"
+                },
+                "INT_Default_Barcode_Qty": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "MGST_Tax_Code": {
+                  "type": "string"
+                },
+                "MGST_Tax_Code_Purchase": {
+                  "type": "string"
+                },
+                "Double_Weight": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Double_Height": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Double_Length": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Double_Width": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Bool_ServiceItem_Shippable": {
+                  "type": "boolean"
+                },
+                "Double_Min_Profit_Margin": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Int_MarkdownCount": {
+                  "format": "int32",
+                  "type": "integer"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group MatrixGroups
+
+### /admin/v1/matrixgroups/count
+
+#### Receive a count of all Matrixgroups [GET]
+
++ Relation: MatrixGroups_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/matrixgroups/{id}
+
+#### Receive a single Matrixgroup [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: MatrixGroups_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Matrixgroup [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: MatrixGroups_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Matrixgroup from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: MatrixGroups_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all Matrixgroups [GET /admin/v1/matrixgroups/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: MatrixGroups_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/matrixgroups
+
+#### Create a new Matrixgroup [POST]
+
++ Relation: MatrixGroups_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Matrix_Group_Name": {
+                  "type": "string"
+                },
+                "Matrix_Group_Value": {
+                  "type": "string"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "type": "integer"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group Payments
+
+### /admin/v1/payments/count
+
+#### Receive a count of all Payments [GET]
+
++ Relation: Payments_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/payments/{id}
+
+#### Receive a single Payment [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Payments_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Payment [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Payments_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Payment from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Payments_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### GET /admin/v1/payments/search
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: Payments_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/payments
+
+#### Create a new Payment [POST]
+
++ Relation: Payments_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Date": {
+                  "type": "string"
+                },
+                "Customer_ID": {
+                  "type": "string"
+                },
+                "Invoice_ID": {
+                  "type": "string"
+                },
+                "DOUBLE_Amount": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Method": {
+                  "type": "string"
+                },
+                "Reference": {
+                  "type": "string"
+                },
+                "Location_ID": {
+                  "type": "string"
+                },
+                "Time": {
+                  "type": "string"
+                },
+                "BOOL_IsVoid": {
+                  "type": "boolean"
+                },
+                "INT_EXTEND_1": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "type": "string"
+                },
+                "SenderPaymentID": {
+                  "type": "string"
+                },
+                "ReceiverPaymentID": {
+                  "type": "string"
+                },
+                "Received_By": {
+                  "type": "string"
+                },
+                "Reference_3": {
+                  "type": "string"
+                },
+                "Reference_4": {
+                  "type": "string"
+                },
+                "Remark": {
+                  "type": "string"
+                },
+                "DOUBLE_Tendered": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DeclarationSessionID": {
+                  "type": "string"
+                },
+                "Accounting_Ref_1": {
+                  "type": "string"
+                },
+                "Accounting_Ref_2": {
+                  "type": "string"
+                },
+                "Accounting_Ref_3": {
+                  "type": "string"
+                },
+                "EODLogID": {
+                  "type": "string"
+                },
+                "StoreEODID": {
+                  "type": "string"
+                },
+                "BOOL_IsDeposit": {
+                  "type": "boolean"
+                },
+                "SalesOrderID": {
+                  "type": "string"
+                },
+                "ServiceID": {
+                  "type": "string"
+                },
+                "Credit_Card_Type_2": {
+                  "type": "string"
+                },
+                "Credit_Card_Type_3": {
+                  "type": "string"
+                },
+                "Business_Date": {
+                  "type": "string"
+                },
+                "Payment_Type": {
+                  "type": "string"
+                },
+                "Internal_Ref_ID": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "Double_Available_Balance": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Used_Date": {
+                  "type": "string"
+                },
+                "Prepaid_CardNo": {
+                  "type": "string"
+                },
+                "Prepaid_TrxnRefNo": {
+                  "type": "string"
+                },
+                "double_exchange_rate": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Currency_Symbol": {
+                  "type": "string"
+                },
+                "double_foreign_amount": {
+                  "format": "double",
+                  "type": "number"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group PrintingLayoutSettings
+
+### /admin/v1/printinglayoutsettings/count
+
+#### Receive a count of Printinglayoutsettings [GET]
+
++ Relation: PrintingLayoutSettings_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/printinglayoutsettings/{id}
+
+#### Receive a single Printinglayoutsettings [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: PrintingLayoutSettings_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Printinglayoutsetting [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: PrintingLayoutSettings_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Printinglayoutsetting from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: PrintingLayoutSettings_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of Printinglayoutsettings [GET /admin/v1/printinglayoutsettings/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: PrintingLayoutSettings_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/printinglayoutsettings
+
+#### Create a new Printinglayoutsetting [POST]
+
++ Relation: PrintingLayoutSettings_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Layout_Name": {
+                  "type": "string"
+                },
+                "Layout_Category": {
+                  "type": "string"
+                },
+                "Layout_String": {
+                  "type": "string"
+                },
+                "Location_ID": {
+                  "type": "string"
+                },
+                "BOOL_Is_Active": {
+                  "type": "boolean"
+                },
+                "BOOL_Is_Customized": {
+                  "type": "boolean"
+                },
+                "BOOL_Is_Default": {
+                  "type": "boolean"
+                },
+                "INT_Layout_Index": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "type": "string"
+                },
+                "BOOL_Is_Print_Default_Printer": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "BOOL_Is_Print_Preview": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "BOOL_Is_Print_To_PDF": {
+                  "format": "int32",
+                  "type": "integer"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group PurchaseOrderItems
+
+### /admin/v1/purchaseorderitems/count
+
+#### Receive a count of all PurchaseOrderItems [GET]
+
++ Relation: PurchaseOrderItems_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/purchaseorderitems/{id}
+
+#### Receive a single PurchaseOrderItem [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: PurchaseOrderItems_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing PurchaseOrderItem [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: PurchaseOrderItems_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a PurchaseOrderItem from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: PurchaseOrderItems_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all PurchaseOrderItems [GET /admin/v1/purchaseorderitems/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: PurchaseOrderItems_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/purchaseorderitems
+
+#### Create a new PurchaseOrderItem [POST]
+
++ Relation: PurchaseOrderItems_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "PO_Item_ID": {
+                  "type": "string"
+                },
+                "PO_No": {
+                  "type": "string"
+                },
+                "Sale_No": {
+                  "type": "string"
+                },
+                "R_ItemID": {
+                  "type": "string"
+                },
+                "R_Item_Code": {
+                  "type": "string"
+                },
+                "R_Item_Name": {
+                  "type": "string"
+                },
+                "R_Item_Brand": {
+                  "type": "string"
+                },
+                "R_Item_Model": {
+                  "type": "string"
+                },
+                "R_Color": {
+                  "type": "string"
+                },
+                "INT_R_Qty": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_R_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "C_ItemID": {
+                  "type": "string"
+                },
+                "C_Item_Code": {
+                  "type": "string"
+                },
+                "C_Item_Name": {
+                  "type": "string"
+                },
+                "C_Item_Brand": {
+                  "type": "string"
+                },
+                "C_Item_Model": {
+                  "type": "string"
+                },
+                "C_Color": {
+                  "type": "string"
+                },
+                "INT_C_Qty": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_C_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Remark": {
+                  "type": "string"
+                },
+                "DOUBLE_Discount_Percentage": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Discount_Amount": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Expiry": {
+                  "type": "string"
+                },
+                "INT_Total_Shipped": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "INT_Total_Received": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Item_Type": {
+                  "type": "string"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "type": "string"
+                },
+                "Sender_PO_Item_ID": {
+                  "type": "string"
+                },
+                "Receiver_PO_Item_ID": {
+                  "type": "string"
+                },
+                "Alt_Lookup": {
+                  "type": "string"
+                },
+                "Matrix_Barcode": {
+                  "type": "string"
+                },
+                "DOUBLE_Sale_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Employee_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Wholesale_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Custom_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Manufacturer_Suggested_Retail_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Web_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Web_Dealer_Price": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Location_ID": {
+                  "type": "string"
+                },
+                "Line_Num": {
+                  "type": "string"
+                },
+                "Purchase_UOM": {
+                  "type": "string"
+                },
+                "DOUBLE_Total_Amount": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Barcode": {
+                  "type": "string"
+                },
+                "Ref_PO_No": {
+                  "type": "string"
+                },
+                "DOUBLE_Enter_Quantity": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_UOM_Quantity": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Package_ID": {
+                  "type": "string"
+                },
+                "MGST_Tax_Code": {
+                  "type": "string"
+                },
+                "DOUBLE_MGST_Tax_Percentage": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_MGST_Tax_Amount": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "BOOL_Is_Inclusive_MGST": {
+                  "type": "boolean"
+                },
+                "Double_Enter_Cost": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Stock_Type": {
+                  "type": "string"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group PurchaseOrders
+
+### /admin/v1/purchaseorders/count
+
+#### Receive a count of all Purchaseorders [GET]
+
++ Relation: PurchaseOrders_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/purchaseorders/{id}
+
+#### Receive a single Purchaseorder [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: PurchaseOrders_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Purchaseorder [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: PurchaseOrders_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Purchaseorder from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: PurchaseOrders_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all Purchaseorders [GET /admin/v1/purchaseorders/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: PurchaseOrders_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/purchaseorders
+
+#### Create a new Purchaseorder [POST]
+
++ Relation: PurchaseOrders_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "To_Email": {
+                  "type": "string"
+                },
+                "To_Company_Domain": {
+                  "type": "string"
+                },
+                "To_Company": {
+                  "type": "string"
+                },
+                "Issue_To": {
+                  "type": "string"
+                },
+                "From_Company": {
+                  "type": "string"
+                },
+                "Issue_By": {
+                  "type": "string"
+                },
+                "Last_Received_By": {
+                  "type": "string"
+                },
+                "Last_Received_Date": {
+                  "type": "string"
+                },
+                "Remarks": {
+                  "type": "string"
+                },
+                "Issue_Date": {
+                  "type": "string"
+                },
+                "PO_No": {
+                  "type": "string"
+                },
+                "Sales_No": {
+                  "type": "string"
+                },
+                "DOUBLE_Discount_Percentage": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Discount_Amount": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Customer_ID": {
+                  "type": "string"
+                },
+                "Invoice_ID": {
+                  "type": "string"
+                },
+                "Person_In_Charge": {
+                  "type": "string"
+                },
+                "Method": {
+                  "type": "string"
+                },
+                "Reference": {
+                  "type": "string"
+                },
+                "Submitter_Location_ID": {
+                  "type": "string"
+                },
+                "Producer_Location_ID": {
+                  "type": "string"
+                },
+                "Producer_Name": {
+                  "type": "string"
+                },
+                "Status": {
+                  "type": "string"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_4": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_5": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_6": {
+                  "type": "string"
+                },
+                "Sender_PO_ID": {
+                  "type": "string"
+                },
+                "Receiver_PO_ID": {
+                  "type": "string"
+                },
+                "BOOL_IsPO": {
+                  "type": "boolean"
+                },
+                "DOUBLE_Total_Amount": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Paid_Amount": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Balance_Amount": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Double_Tax_Percentage": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_ServiceCharge": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_ExchangeRate": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Delivery_Date": {
+                  "type": "string"
+                },
+                "Delivery_Address": {
+                  "type": "string"
+                },
+                "PO_Expiry_Date": {
+                  "type": "string"
+                },
+                "Ref_No": {
+                  "type": "string"
+                },
+                "Ref_PO_No": {
+                  "type": "string"
+                },
+                "Department": {
+                  "type": "string"
+                },
+                "Cancel_Date": {
+                  "type": "string"
+                },
+                "Cancel_Time": {
+                  "type": "string"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group StockChecks
+
+### /admin/v1/stockchecks/count
+
+#### Receive a count of all Stockcheck [GET]
+
++ Relation: StockChecks_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/stockchecks/{id}
+
+#### Receive a single Stockcheck [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: StockChecks_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Stockcheck [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: StockChecks_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Stockcheck from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: StockChecks_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all Stockchecks [GET /admin/v1/stockchecks/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: StockChecks_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/stockchecks
+
+#### Create a new Stockchecks [POST]
+
++ Relation: StockChecks_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Date": {
+                  "type": "string"
+                },
+                "Time": {
+                  "type": "string"
+                },
+                "Item_ID": {
+                  "type": "string"
+                },
+                "BranchID": {
+                  "type": "string"
+                },
+                "Instore_Location": {
+                  "type": "string"
+                },
+                "INT_Stock_Onhand_Balance": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_Stock_Available_Balance": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "JournalID": {
+                  "type": "string"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "type": "string"
+                },
+                "Unique_ID": {
+                  "type": "string"
+                },
+                "DOUBLE_ACC_OH": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_ACC_AV": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_AVG_COST": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_FIFO_COST": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_LIFO_COST": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_STOCKIN_COST": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_STOCKOUT_PRICE": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_AVG_PROFIT": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_FIFO_PROFIT": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_LIFO_PROFIT": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "BOOL_COUNTED": {
+                  "type": "boolean"
+                },
+                "BOOL_NEED_COUNT": {
+                  "type": "boolean"
+                },
+                "Entity": {
+                  "type": "string"
+                },
+                "DOUBLE_Branch_Acc_OH": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "DOUBLE_Branch_Acc_AV": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "BOOL_Branch_Counted": {
+                  "type": "boolean"
+                },
+                "DOUBLE_STOCK_VALUE": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "BOOL_Freeze": {
+                  "type": "boolean"
+                },
+                "LastUpdate": {
+                  "type": "string"
+                },
+                "DOUBLE_Affected_Value": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Financial_Period": {
+                  "type": "string"
+                },
+                "Transact_UOM": {
+                  "type": "string"
+                },
+                "Transact_SKU": {
+                  "type": "string"
+                },
+                "Barcode": {
+                  "type": "string"
+                },
+                "UOM_Factor": {
+                  "type": "string"
+                },
+                "Account_No": {
+                  "type": "string"
+                },
+                "TransferFrom": {
+                  "type": "string"
+                },
+                "TransferTo": {
+                  "type": "string"
+                },
+                "PerformedDate": {
+                  "type": "string"
+                },
+                "VendorID": {
+                  "type": "string"
+                },
+                "CustomerID": {
+                  "type": "string"
+                },
+                "DocumentID": {
+                  "type": "string"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group Stocks
+
+### /admin/v1/stocks/count
+
+#### Receive a count of all Stocks [GET]
+
++ Relation: Stocks_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/stocks/{id}
+
+#### Receive a single Stock [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Stocks_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Stock [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Stocks_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Stock from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Stocks_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all Stocks [GET /admin/v1/stocks/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: Stocks_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/stocks
+
+#### Create a new Stock [POST]
+
++ Relation: Stocks_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Location": {
+                  "type": "string"
+                },
+                "Item_Code": {
+                  "type": "string"
+                },
+                "INT_Total_Adjusted_Up": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_Total_Adjusted_Down": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_Total_Transferred_In": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_Total_Transferred_Out": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "In_Store_Location": {
+                  "type": "string"
+                },
+                "INT_On_Order": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_Reorder_Point": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_Available_Quantity": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_Onhand_Quantity": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "type": "string"
+                },
+                "BOOL_Allow_To_Purchase": {
+                  "type": "boolean"
+                },
+                "BOOL_Allow_To_Sell": {
+                  "type": "boolean"
+                },
+                "BOOL_Allow_Transfer": {
+                  "type": "boolean"
+                },
+                "BOOL_Allow_Issue": {
+                  "type": "boolean"
+                },
+                "BOOL_Allow_Receipt": {
+                  "type": "boolean"
+                },
+                "BOOL_Allow_Inter_Company": {
+                  "type": "boolean"
+                },
+                "Vendor_Code": {
+                  "type": "string"
+                },
+                "BOOL_Active": {
+                  "type": "boolean"
+                },
+                "BOOL_Returnable": {
+                  "type": "boolean"
+                },
+                "Stock_Ownership": {
+                  "type": "string"
+                },
+                "Purch_Unavailable_Date_From": {
+                  "type": "string"
+                },
+                "Purch_Unavailable_Date_To": {
+                  "type": "string"
+                },
+                "Purch_Unavailable_Remark": {
+                  "type": "string"
+                },
+                "DOUBLE_AVG_Cost": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Shelf_No": {
+                  "type": "string"
+                },
+                "Double_Display_Unit": {
+                  "format": "double",
+                  "type": "number"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group Transactions
+
+### /admin/{namespace}/Transactions
+
+#### POST
+
++ Parameters
+
+    + namespace (required)
+
++ Relation: Transactions_Transactions
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group Vendors
+
+### /admin/v1/vendors/count
+
+#### Receive a count of all Vendors [GET]
+
++ Relation: Vendors_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/vendors/{id}
+
+#### Receive a single Vendor [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Vendors_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Vendor [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Vendors_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Vendor from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Vendors_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all Vendors [GET /admin/v1/vendors/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: Vendors_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/vendors
+
+#### Create a new Vendor [POST]
+
++ Relation: Vendors_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "required": [
+                "Vendor_Code",
+                "Company_Name"
+              ],
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Vendor_Code": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Company_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Salutation": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "First_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Last_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Email": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "pattern": "^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$",
+                  "type": "string"
+                },
+                "Website": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Phone": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Office": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Mobile": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Alt_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Alt_Contact": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Alt_Phone": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Street": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "City": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "State": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Zipcode": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Additional_Info": {
+                  "maxLength": 1000,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Fax": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Country": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Address_Remark": {
+                  "maxLength": 1000,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Account1": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Account2": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Account3": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Terms": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Active": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Type": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Remarks": {
+                  "maxLength": 1000,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Binarykey": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_1": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_2": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_3": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_4": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_5": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_6": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_7": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_8": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_9": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_10": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_11": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_12": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_13": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_14": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_15": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_16": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_17": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Custom_Field_Value_18": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Creation_Date": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "BOOL_IsXilnexConnect": {
+                  "type": "boolean"
+                },
+                "Domain": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "WebUserName": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Password": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Location_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Location_Name": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Pay_Mode": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Currency": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "DOUBLE_Max_Credit": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "Ref_Vendor_Code": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Account_No": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Account_Type": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Vendor_Identifier_Code": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Vendor_Group": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Bool_Active": {
+                  "type": "boolean"
+                },
+                "BOOL_Allow_All_Branches": {
+                  "type": "boolean"
+                },
+                "BOOL_Allow_All_Item": {
+                  "type": "boolean"
+                },
+                "Double_Leadtime": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "GST_No": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "BOOL_Is_Inclusive_MGST": {
+                  "type": "boolean"
+                },
+                "MGST_Tax_Code": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+## Group Vouchers
+
+### /admin/v1/vouchers/count
+
+#### Receive a count of all Vouchers [GET]
+
++ Relation: Vouchers_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/vouchers/{id}
+
+#### Receive a single Voucher [GET]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Vouchers_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Modify an existing Voucher [PUT]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Vouchers_Update
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Remove a Voucher from the database [DELETE]
+
++ Parameters
+
+    + id (required)
+
++ Relation: Vouchers_Delete
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+#### Receive a list of all Vouchers [GET /admin/v1/vouchers/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+
++ Relation: Vouchers_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/vouchers
+
+#### Create a new Voucher [POST]
+
++ Relation: Vouchers_Create
+
++ Request
+
+    + Body
+
+    + Schema
+
+            {
+              "required": [
+                "Redemption_Type_ID",
+                "Voucher_Date",
+                "Voucher_Time",
+                "Voucher_No",
+                "Promotion_Type",
+                "STRING_EXTEND_2",
+                "Voucher_ExpiryDate",
+                "Bool_Is_Activation"
+              ],
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "Redemption_Type_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Voucher_Date": {
+                  "pattern": "^(((0[1-9]|[12]\\d|3[01])\\/(0[13578]|1[02])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|[12]\\d|30)\\/(0[13456789]|1[012])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|1\\d|2[0-8])\\/02\\/((19|[2-9]\\d)\\d{2}))|(29\\/02\\/((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$",
+                  "type": "string"
+                },
+                "Voucher_Time": {
+                  "pattern": "([0-2][0-3]):([0-5][0-9]):([0-5][0-9])",
+                  "type": "string"
+                },
+                "Issue_By": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Branch_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Client_ID": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Voucher_No": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Time__Voucher_Time": {
+                  "type": "string"
+                },
+                "Promotion_Type": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "INT_EXTEND_1": {
+                  "format": "int32",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer"
+                },
+                "INT_EXTEND_2": {
+                  "format": "int32",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer"
+                },
+                "INT_EXTEND_3": {
+                  "format": "int32",
+                  "maximum": 2147483647,
+                  "minimum": -2147483648,
+                  "type": "integer"
+                },
+                "STRING_EXTEND_1": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "STRING_EXTEND_2": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "STRING_EXTEND_3": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Voucher_ExpiryDate": {
+                  "pattern": "^(((0[1-9]|[12]\\d|3[01])\\/(0[13578]|1[02])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|[12]\\d|30)\\/(0[13456789]|1[012])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|1\\d|2[0-8])\\/02\\/((19|[2-9]\\d)\\d{2}))|(29\\/02\\/((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$",
+                  "type": "string"
+                },
+                "Bool_Is_Activation": {
+                  "type": "boolean"
+                },
+                "Voucher_Description": {
+                  "maxLength": 1000,
+                  "minLength": 0,
+                  "type": "string"
+                },
+                "Redemption_Date": {
+                  "pattern": "^(((0[1-9]|[12]\\d|3[01])\\/(0[13578]|1[02])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|[12]\\d|30)\\/(0[13456789]|1[012])\\/((19|[2-9]\\d)\\d{2}))|((0[1-9]|1\\d|2[0-8])\\/02\\/((19|[2-9]\\d)\\d{2}))|(29\\/02\\/((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$",
+                  "type": "string"
+                },
+                "Voucher_Type": {
+                  "maxLength": 255,
+                  "minLength": 0,
+                  "type": "string"
+                }
+              }
+            }
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
