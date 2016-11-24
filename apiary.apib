@@ -67,8 +67,11 @@ permissions for requested operation.
 `/admin/{version}/{controller}/search` support query parameters to refine responses
 
 * `select` - 
+    * Command function pattern - `DISTINCT`, `COUNT`
     * Example
         * /search?select=fieldName1, fieldName2
+        * /search?select=DISTINCT(fieldName1)
+        * /search?select=COUNT(fieldName1)
 * `filter` -  filter parameter to control search results. 
     * Equal - exact same. `=@`
     * Not equal - not same. `!=`, `<>`
