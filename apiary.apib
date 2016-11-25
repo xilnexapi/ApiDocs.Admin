@@ -4992,41 +4992,41 @@ permissions for requested operation.
 + Department_Code
 + Department_Name
 + Vendor_Code
-+ INT_Total_Avail_Qty
-+ INT_Total_Onhand_Qty
-+ DOUBLE_Cost
-+ DOUBLE_Manufacturer_Suggested_Retail_Price
++ INT_Total_Avail_Qty (number)
++ INT_Total_Onhand_Qty (number)
++ DOUBLE_Cost (number)
++ DOUBLE_Manufacturer_Suggested_Retail_Price (number)
 + Active_Price
-+ DOUBLE_Sale_Price
-+ DOUBLE_Employee_Price
-+ DOUBLE_Wholesale_Price
-+ DOUBLE_Custom_Price
-+ DOUBLE_Web_Price
-+ DOUBLE_Web_Dealer_Price
-+ DOUBLE_Margin
-+ DOUBLE_Total_Profit
-+ DOUBLE_Custom_Cost
++ DOUBLE_Sale_Price (number)
++ DOUBLE_Employee_Price (number)
++ DOUBLE_Wholesale_Price (number)
++ DOUBLE_Custom_Price (number)
++ DOUBLE_Web_Price (number)
++ DOUBLE_Web_Dealer_Price (number)
++ DOUBLE_Margin (number)
++ DOUBLE_Total_Profit (number)
++ DOUBLE_Custom_Cost (number)
 + Unit_of_Measure
 + Last_Receive_Date
 + INT_Total_Quantity_Received
 + INT_Total_Returned_to_Vendor
 + INT_Total_Quantity_Sold
 + INT_Total_Quantity_Return
-+ DOUBLE_Net_sales
-+ DOUBLE_Profit_Margin
-+ INT_Reorder_Point
++ DOUBLE_Net_sales (number)
++ DOUBLE_Profit_Margin (number)
++ INT_Reorder_Point (number)
 + Atlternate_Look_Up
 + Attribute
 + Size
 + Binarykey
-+ BOOL_Go_Global
-+ BOOL_FIFO
++ BOOL_Go_Global (boolean)
++ BOOL_FIFO (boolean)
 + Group_Name
-+ BOOL_IsPackage
++ BOOL_IsPackage (boolean)
 + Discount_Rate
 + Group_Value
 + Promotion_Name
-+ BOOL_IsService
++ BOOL_IsService (boolean)
 + Custom_Field_Value_1
 + Custom_Field_Value_2
 + Custom_Field_Value_3
@@ -5046,42 +5046,42 @@ permissions for requested operation.
 + Custom_Field_Value_17
 + Custom_Field_Value_18
 + Creation_Date
-+ BOOL_Weighted
-+ DOUBLE_Cash_Value_Rate
-+ DOUBLE_Points_Value_Rate
-+ DOUBLE_Accumulate_Value_Rate
-+ BOOL_Is_Prepack
-+ BOOL_Is_Consignment
-+ BOOL_Is_Unique_Item
++ BOOL_Weighted (boolean)
++ DOUBLE_Cash_Value_Rate (number)
++ DOUBLE_Points_Value_Rate (number)
++ DOUBLE_Accumulate_Value_Rate (number)
++ BOOL_Is_Prepack (boolean)
++ BOOL_Is_Consignment (boolean)
++ BOOL_Is_Unique_Item (boolean)
 + Xilnex_Vendor_ID
-+ DOUBLE_GST_Rate
-+ DOUBLE_Commision_1
-+ DOUBLE_Commision_2 
-+ DOUBLE_Commision_Rate_1
-+ DOUBLE_Commision_Rate_2
-+ DOUBLE_Commision_3
-+ DOUBLE_Commision_4
-+ DOUBLE_Commision_Rate_3
-+ DOUBLE_Commision_Rate_4
-+ BOOL_Allow_Sales_Without_Stocks
++ DOUBLE_GST_Rate (number)
++ DOUBLE_Commision_1 (number)
++ DOUBLE_Commision_2  (number)
++ DOUBLE_Commision_Rate_1 (number)
++ DOUBLE_Commision_Rate_2 (number)
++ DOUBLE_Commision_3 (number)
++ DOUBLE_Commision_4 (number)
++ DOUBLE_Commision_Rate_3 (number)
++ DOUBLE_Commision_Rate_4 (number)
++ BOOL_Allow_Sales_Without_Stocks (boolean)
 + Parent_Item_ID
-+ BOOL_Is_Child
-+ BOOL_Local_Price
-+ BOOL_FOC
-+ BOOL_Open_Price
-+ BOOL_disabled
-+ DOUBLE_AVG_Cost
-+ DOUBLE_FIFO_Cost
-+ DOUBLE_LIFO_Cost
-+ DOUBLE_AVG_PROFIT
-+ DOUBLE_FIFO_PROFIT
-+ DOUBLE_LIFO_PROFIT
-+ DOUBLE_LAST_STOCK_IN_COST
++ BOOL_Is_Child (boolean)
++ BOOL_Local_Price (boolean)
++ BOOL_FOC (boolean)
++ BOOL_Open_Price (boolean)
++ BOOL_disabled (boolean)
++ DOUBLE_AVG_Cost (number)
++ DOUBLE_FIFO_Cost (number)
++ DOUBLE_LIFO_Cost (number)
++ DOUBLE_AVG_PROFIT (number)
++ DOUBLE_FIFO_PROFIT (number)
++ DOUBLE_LIFO_PROFIT (number)
++ DOUBLE_LAST_STOCK_IN_COST (number)
 + Article_No
 + Item_Color
-+ BOOL_Postpack
-+ BOOL_Branch_Assortment
-+ BOOL_ReturnableItem
++ BOOL_Postpack (boolean)
++ BOOL_Branch_Assortment (boolean)
++ BOOL_ReturnableItem (boolean)
 + Purch_Unavailable_Date_From
 + Purch_Unavailable_Date_To
 + Purch_Unavailable_Remark
@@ -5089,55 +5089,55 @@ permissions for requested operation.
 + Day_Before_Expiry
 + Shelf_Life_In_Days
 + Item_Division
-+ DOUBLE_DRIVER_COMMISSION_RATE
-+ DOUBLE_DRIVER_COMMISSION_PERCENT
-+ DOUBLE_INSTALLER_COMMISSION_RATE
-+ DOUBLE_INSTALLER_COMMISSION_PERCENT
-+ INT_Default_Warranty_Month
-+ INT_Max_Warranty_Month
++ DOUBLE_DRIVER_COMMISSION_RATE (number)
++ DOUBLE_DRIVER_COMMISSION_PERCENT (number)
++ DOUBLE_INSTALLER_COMMISSION_RATE (number)
++ DOUBLE_INSTALLER_COMMISSION_PERCENT (number)
++ INT_Default_Warranty_Month (number)
++ INT_Max_Warranty_Month (number)
 + Warranty_Group
-+ BOOL_IsWarranty
++ BOOL_IsWarranty (boolean)
 + Default_Warranty_Item
 + Warranty_Serial_No_Prefix
 + Additional_Item_Type
-+ INT_Default_Barcode_Qty
++ INT_Default_Barcode_Qty (number)
 + MGST_Tax_Code
 + MGST_Tax_Code_Purchase
-+ Double_Weight
-+ Double_Height
-+ Double_Length
-+ Double_Width
-+ Bool_ServiceItem_Shippable
-+ Double_Min_Profit_Margin
-+ Int_MarkdownCount
++ Double_Weight (number)
++ Double_Height (number)
++ Double_Length (number)
++ Double_Width (number)
++ Bool_ServiceItem_Shippable (boolean)
++ Double_Min_Profit_Margin (number)
++ Int_MarkdownCount (number)
 
 #  Data Structures
 ## Stocks (object)
 + ID
 + Location
 + Item_Code
-+ INT_Total_Adjusted_Up
-+ INT_Total_Adjusted_Down
-+ INT_Total_Transferred_In
-+ INT_Total_Transferred_Out
++ INT_Total_Adjusted_Up (number)
++ INT_Total_Adjusted_Down (number)
++ INT_Total_Transferred_In (number)
++ INT_Total_Transferred_Out (number)
 + In_Store_Location
-+ INT_On_Order
-+ INT_Reorder_Point
-+ INT_Available_Quantity
-+ INT_Onhand_Quantity
-+ BOOL_Allow_To_Purchase
-+ BOOL_Allow_To_Sell
-+ BOOL_Allow_Transfer
-+ BOOL_Allow_Issue
-+ BOOL_Allow_Receipt
-+ BOOL_Allow_Inter_Company
++ INT_On_Order (number)
++ INT_Reorder_Point (number)
++ INT_Available_Quantity (number)
++ INT_Onhand_Quantity (number)
++ BOOL_Allow_To_Purchase (boolean)
++ BOOL_Allow_To_Sell (boolean)
++ BOOL_Allow_Transfer (boolean)
++ BOOL_Allow_Issue (boolean)
++ BOOL_Allow_Receipt (boolean)
++ BOOL_Allow_Inter_Company (boolean)
 + Vendor_Code
-+ BOOL_Active
-+ BOOL_Returnable
++ BOOL_Active (boolean)
++ BOOL_Returnable (boolean)
 + Stock_Ownership
 + Purch_Unavailable_Date_From
 + Purch_Unavailable_Date_To
 + Purch_Unavailable_Remark
-+ DOUBLE_AVG_Cost
++ DOUBLE_AVG_Cost (number)
 + Shelf_No
-+ Double_Display_Unit
++ Double_Display_Unit (number)
