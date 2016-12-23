@@ -2651,6 +2651,78 @@ permissions for requested operation.
               "properties": {}
             }
 
+## Group Sales
+
+### /admin/v1/sales/count
+
+#### Receive a count of all Sales [GET]
+
++ Relation: Sales_Count
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
+### /admin/v1/sales/{id}
+
+#### Receive a single Sale [GET]
+
++ Parameters
+
+    + id (required)
+    
++ Attributes (Sale)
+
++ Relation: Sales_Read
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+#### Receive a list of all Sales [GET /admin/v1/sales/search]
+
++ Parameters
+
+    + select
+    
+    + filter
+    
+    + sort
+    
+    + limit
+    
+    + offset
+    
++ Attributes (Sale)
+
++ Relation: Sales_Search
+
++ Response 200
+
+    OK
+
+    + Body
+
+    + Schema
+
+            {
+              "type": "object",
+              "properties": {}
+            }
+
 ## Group StockChecks
 
 ### /admin/v1/stockchecks/count
@@ -4295,3 +4367,96 @@ permissions for requested operation.
 + Created_By
 + IC
 + INT_PLATFORM (number)
+
+#  Data Structures
+## Sale (object)
++ ID
++ Sales_No
++ Sales_Date
++ Now_Time
++ DOUBLE_Total_Amount (number)
++ Recipient
++ Customer_Id
++ Customer_Name
++ DOUBLE_Paid_Amount (number)
++ DOUBLE_Balance_Amount (number)
++ Term
++ Cashier
++ Bill_Street
++ Bill_City
++ Bill_State
++ Bill_Country
++ Bill_PostCode
++ Bill_Remark
++ Ship_Street
++ Ship_City
++ Ship_State
++ Ship_Country
++ Ship_PostCode
++ Ship_Remark
++ Shipment_Date
++ Shipment_Time
++ Sales_Person
++ Ship_Status
++ Sales_Status
++ Payment_Status
++ Sale_Location
++ Sale_Remark
++ Double_Discount_Percentage (number)
++ Double_Tax_Percentage (number)
++ Double_Cost (number)
++ Double_Profit (number)
++ BOOL_Is_Cash_Sales (boolean)
++ BOOL_Is_WebSales (boolean)
++ DOUBLE_RoundingAmount (number)
++ Recipient_Contact
++ Cancel_By
++ Cancel_Remark
++ Cancel_Date
++ Cancel_Time
++ Cancel_Location_ID
++ DOUBLE_Net_Amount (number)
++ Settlement_date
++ BOOL_Is_ReturnSales (boolean)
++ BOOL_Is_InternalSales (boolean)
++ Internal_Sales_Location
++ Receive_ID
++ FR_ReceiveID
++ Internal_Sales_ReceiveVendorID
++ Internal_Sales_ReceiveVendorName
++ Sales_Type
++ DOUBLE_Tendered_Amount (number)
++ INT_EXTEND_1 (number)
++ INT_EXTEND_2 (number)
++ INT_EXTEND_3 (number)
++ STRING_EXTEND_1
++ STRING_EXTEND_2
++ STRING_EXTEND_3
++ Sales_Order_No
++ Quotations_No
++ BOOL_SO_Revert (boolean)
++ Ref_Sales_ID (number)
++ Counter_Timer
++ Pre_Saved_Status
++ DeclarationSessionID
++ EODLogID
++ StoreEODID
++ Business_Date
++ DOUBLE_MGST_Tax_Amount (number)
++ Completed_Date
++ Custom_Field_Value_1
++ Custom_Field_Value_2
++ Custom_Field_Value_3
++ Custom_Field_Value_4
++ Custom_Field_Value_5
++ DOUBLE_ExchangeRate (number)
++ Customer_Type
++ Estimated_Delivery_Date
++ RowLocking
++ BOOL_IsBillPrinted (number)
++ BOOL_IsRefund (number)
++ INT_PrintBillCount (number)
++ INT_FireOrderCount (number)
++ Bool_Send_Via_Email (boolean)
++ Email_Status
++ Email_Remark
