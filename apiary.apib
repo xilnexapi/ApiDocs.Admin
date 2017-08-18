@@ -11,7 +11,7 @@ language such as JavaScript, Ruby, Swift, Object-C. C#, Java, php, Python, etc.
 ## Setup for REST API
 For using this API you need send authenticated HTTP requests. Exists several 
 way to do this:
-* Send a HTTP header with include `Token: {api_token}` and `Dkey: {Dkey}`
+* Send a HTTPS header with include `Token: {api_token}` and `Dkey: {Dkey}`
 , where `{api_token}` is your API token and `{dkey}` is your private key
 ![name](https://s15.postimg.org/oagoiyr7f/Screenshot_1.png)
 
@@ -31,7 +31,7 @@ API e-mail address and password `You need to create a user on xilnex application
 specific for API purpose only`
 
 ## Basic Usage
-### HTTP / HTTPS
+### HTTPS
 * All endpoints are available over HTTPS only.
 
 ### Allowed HTTPs requests:
@@ -704,33 +704,7 @@ permissions for requested operation.
               "properties": {}
             }
 
-### /admin/v1/customers
 
-#### Create a new Customer [POST]
-
-+ Relation: Customers_Create
-
-+ Attributes (Customer)
-
-+ Request
-
-    + Body
-
-    + Schema
-
-
-+ Response 200
-
-    OK
-
-    + Body
-
-    + Schema
-
-            {
-              "type": "object",
-              "properties": {}
-            }
 
 ## Group Items
 
@@ -849,498 +823,7 @@ permissions for requested operation.
               "properties": {}
             }
 
-### /admin/v1/items
 
-#### Create a new Item [POST]
-
-+ Relation: Items_Create
-
-+ Request
-
-    + Body
-
-    + Schema
-
-            {
-              "type": "object",
-              "properties": {
-                "ID": {
-                  "format": "int64",
-                  "type": "integer"
-                },
-                "Item_Code": {
-                  "type": "string"
-                },
-                "Item_Name": {
-                  "type": "string"
-                },
-                "Item_Type": {
-                  "type": "string"
-                },
-                "Item_Model": {
-                  "type": "string"
-                },
-                "Item_Description": {
-                  "type": "string"
-                },
-                "Item_Brand": {
-                  "type": "string"
-                },
-                "Category": {
-                  "type": "string"
-                },
-                "Department_Code": {
-                  "type": "string"
-                },
-                "Department_Name": {
-                  "type": "string"
-                },
-                "Vendor_Code": {
-                  "type": "string"
-                },
-                "INT_Total_Avail_Qty": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "INT_Total_Onhand_Qty": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Cost": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Manufacturer_Suggested_Retail_Price": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "Active_Price": {
-                  "type": "string"
-                },
-                "DOUBLE_Sale_Price": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Employee_Price": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Wholesale_Price": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Custom_Price": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Web_Price": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Web_Dealer_Price": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Margin": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Total_Profit": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Custom_Cost": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "Unit_of_Measure": {
-                  "type": "string"
-                },
-                "Last_Receive_Date": {
-                  "type": "string"
-                },
-                "INT_Total_Quantity_Received": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "INT_Total_Returned_to_Vendor": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "INT_Total_Quantity_Sold": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "INT_Total_Quantity_Return": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Net_sales": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Profit_Margin": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "INT_Reorder_Point": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "Atlternate_Look_Up": {
-                  "type": "string"
-                },
-                "Attribute": {
-                  "type": "string"
-                },
-                "Size": {
-                  "type": "string"
-                },
-                "Binarykey": {
-                  "type": "string"
-                },
-                "BOOL_Go_Global": {
-                  "type": "boolean"
-                },
-                "BOOL_FIFO": {
-                  "type": "boolean"
-                },
-                "INT_EXTEND_1": {
-                  "format": "int32",
-                  "type": "integer"
-                },
-                "INT_EXTEND_2": {
-                  "format": "int32",
-                  "type": "integer"
-                },
-                "INT_EXTEND_3": {
-                  "format": "int32",
-                  "type": "integer"
-                },
-                "STRING_EXTEND_1": {
-                  "type": "string"
-                },
-                "STRING_EXTEND_2": {
-                  "type": "string"
-                },
-                "STRING_EXTEND_3": {
-                  "type": "string"
-                },
-                "Group_Name": {
-                  "type": "string"
-                },
-                "BOOL_IsPackage": {
-                  "type": "boolean"
-                },
-                "Discount_Rate": {
-                  "type": "string"
-                },
-                "Group_Value": {
-                  "type": "string"
-                },
-                "Promotion_Name": {
-                  "type": "string"
-                },
-                "BOOL_IsService": {
-                  "type": "boolean"
-                },
-                "Custom_Field_Value_1": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_2": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_3": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_4": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_5": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_6": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_7": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_8": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_9": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_10": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_11": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_12": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_13": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_14": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_15": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_16": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_17": {
-                  "type": "string"
-                },
-                "Custom_Field_Value_18": {
-                  "type": "string"
-                },
-                "Creation_Date": {
-                  "type": "string"
-                },
-                "BOOL_Weighted": {
-                  "type": "boolean"
-                },
-                "DOUBLE_Cash_Value_Rate": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Points_Value_Rate": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Accumulate_Value_Rate": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "BOOL_Is_Prepack": {
-                  "type": "boolean"
-                },
-                "BOOL_Is_Consignment": {
-                  "type": "boolean"
-                },
-                "BOOL_Is_Unique_Item": {
-                  "type": "boolean"
-                },
-                "Xilnex_Vendor_ID": {
-                  "type": "string"
-                },
-                "DOUBLE_GST_Rate": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Commision_1": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Commision_2": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Commision_Rate_1": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Commision_Rate_2": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Commision_3": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Commision_4": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Commision_Rate_3": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_Commision_Rate_4": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "BOOL_Allow_Sales_Without_Stocks": {
-                  "type": "boolean"
-                },
-                "Parent_Item_ID": {
-                  "type": "string"
-                },
-                "BOOL_Is_Child": {
-                  "type": "boolean"
-                },
-                "BOOL_Local_Price": {
-                  "type": "boolean"
-                },
-                "BOOL_FOC": {
-                  "type": "boolean"
-                },
-                "BOOL_Open_Price": {
-                  "type": "boolean"
-                },
-                "BOOL_disabled": {
-                  "type": "boolean"
-                },
-                "DOUBLE_AVG_Cost": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_FIFO_Cost": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_LIFO_Cost": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_AVG_PROFIT": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_FIFO_PROFIT": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_LIFO_PROFIT": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_LAST_STOCK_IN_COST": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "Article_No": {
-                  "type": "string"
-                },
-                "Item_Color": {
-                  "type": "string"
-                },
-                "BOOL_Postpack": {
-                  "type": "boolean"
-                },
-                "BOOL_Branch_Assortment": {
-                  "type": "boolean"
-                },
-                "BOOL_ReturnableItem": {
-                  "type": "boolean"
-                },
-                "Purch_Unavailable_Date_From": {
-                  "type": "string"
-                },
-                "Purch_Unavailable_Date_To": {
-                  "type": "string"
-                },
-                "Purch_Unavailable_Remark": {
-                  "type": "string"
-                },
-                "Expiry_Calculation": {
-                  "type": "string"
-                },
-                "Day_Before_Expiry": {
-                  "type": "string"
-                },
-                "Shelf_Life_In_Days": {
-                  "type": "string"
-                },
-                "Item_Division": {
-                  "type": "string"
-                },
-                "DOUBLE_DRIVER_COMMISSION_RATE": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_DRIVER_COMMISSION_PERCENT": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_INSTALLER_COMMISSION_RATE": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "DOUBLE_INSTALLER_COMMISSION_PERCENT": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "INT_Default_Warranty_Month": {
-                  "format": "int32",
-                  "type": "integer"
-                },
-                "INT_Max_Warranty_Month": {
-                  "format": "int32",
-                  "type": "integer"
-                },
-                "Warranty_Group": {
-                  "type": "string"
-                },
-                "BOOL_IsWarranty": {
-                  "type": "boolean"
-                },
-                "Default_Warranty_Item": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "Warranty_Serial_No_Prefix": {
-                  "type": "string"
-                },
-                "Additional_Item_Type": {
-                  "type": "string"
-                },
-                "INT_Default_Barcode_Qty": {
-                  "format": "int32",
-                  "type": "integer"
-                },
-                "MGST_Tax_Code": {
-                  "type": "string"
-                },
-                "MGST_Tax_Code_Purchase": {
-                  "type": "string"
-                },
-                "Double_Weight": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "Double_Height": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "Double_Length": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "Double_Width": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "Bool_ServiceItem_Shippable": {
-                  "type": "boolean"
-                },
-                "Double_Min_Profit_Margin": {
-                  "format": "double",
-                  "type": "number"
-                },
-                "Int_MarkdownCount": {
-                  "format": "int32",
-                  "type": "integer"
-                }
-              }
-            }
-
-+ Response 200
-
-    OK
-
-    + Body
-
-    + Schema
-
-            {
-              "type": "object",
-              "properties": {}
-            }
 
 ## Group MatrixGroups
 
@@ -4275,9 +3758,9 @@ permissions for requested operation.
 ## Customer (object)
 + ID
 + Company_ID
-+ Company_Name (string, required)
-+ Company_Registration_Number
-+ Company_Type
++ Company_Name (string, required) - first name + last name
++ Company_Registration_Number - Id
++ Company_Type (string, required) - e.g.VVIP, VIP, 
 + Salutation
 + First_Name
 + Last_Name
@@ -4312,7 +3795,7 @@ permissions for requested operation.
 + INT_EXTEND_2 (number)
 + INT_EXTEND_3 (number)
 + STRING_EXTEND_1
-+ STRING_EXTEND_2
++ STRING_EXTEND_2 (string, reuqire) - Customer type. Default can set to "Personal"
 + STRING_EXTEND_3
 + Custom_Field_Value_1
 + Custom_Field_Value_2
@@ -4335,7 +3818,7 @@ permissions for requested operation.
 + Gender
 + Race
 + Age
-+ DOUBLE_Accumulate_Value (number)
++ DOUBLE_Accumulate_Value (number, require) - customer point default is 0 
 + Reference_Client_ID
 + Friendster_Contact
 + Facebook_Contact
@@ -4359,8 +3842,8 @@ permissions for requested operation.
 + Customer_Code
 + Customer_Group
 + Customer_Account_No
-+ Bool_Active (boolean)
-+ BOOL_Allow_All_Branches (boolean)
++ Bool_Active (boolean) - customer status, true = active
++ BOOL_Allow_All_Branches (boolean) - set true, if need the custome to make sales at all branches
 + Expiry_Extend_Date
 + GST_No
 + BOOL_Is_Inclusive_MGST (boolean)
